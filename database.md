@@ -89,3 +89,6 @@ INTO TABLE medicine_list FIELDS TERMINATED BY ',' ENCLOSED BY '"'
 LINES TERMINATED BY '\n' (id,name,synonyms,efficacy,howtouse,precaution,url,imageurl);
 ~~~
 **Tip. 경로명이 정확한지 확인해주세요.**
+
+
+###Step 5 넘어가기 : [Step 5 - 페이스북 연동](https://github.com/minD3D/MyDoctor-Guide/blob/master/channels.md)

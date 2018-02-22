@@ -92,3 +92,6 @@ $type text*.txt > text_total.txt
 ![pic5](https://user-images.githubusercontent.com/25143478/36528799-ad3c1308-17f9-11e8-8dfe-dbec07cbdb42.JPG)<br>
 
 .csv 확장자로 저장하되 반드시 UTF-8 형식으로 저장해주어야 합니다.
+
+
+###Step 3 넘어가기 : [Step 3 - FAQ 페이지크롤링](https://github.com/minD3D/MyDoctor-Guide/blob/master/crawling3.md)

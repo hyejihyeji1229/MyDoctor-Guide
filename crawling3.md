@@ -100,3 +100,6 @@ $node faq_cr.js > text.txt
 ### 5. csv 파일로 변환
 
 .csv 확장자로 저장하되 반드시 UTF-8 형식으로 저장해주어야 합니다.
+
+
+###Step 4 넘어가기 : [Step 4 - 디비 설계](https://github.com/minD3D/MyDoctor-Guide/blob/master/database.md)

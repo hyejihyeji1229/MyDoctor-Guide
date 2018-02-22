@@ -47,4 +47,4 @@ $ ...\myDoctor\MyDoctor-Chatbot-Componetns> node index.js 를 입력하여 실�
 User Name 과 Password는 담당자에게 문의해주세요
 ~~~
 
-###Step 3 넘어가기 : [Step 3 - ](https://github.com/.md)
+###Step 3 넘어가기 : [Step 3 - 약학정보 페이지크롤링](https://github.com/minD3D/MyDoctor-Guide/blob/master/crawling2.md)
