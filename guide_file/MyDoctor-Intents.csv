@@ -1,0 +1,281 @@
+query,topIntent
+"약검색",AskDrug
+"이 약은 뭐야?",AskDrug
+"이 알약이 궁금해요",AskDrug
+"이 약 정보를 알려줘",AskDrug
+"약 정보",AskDrug
+"알약 검색",AskDrug
+"이거 무슨 약이야?",AskDrug
+"어떤 약인가요?",AskDrug
+"약 정보를 알려주세요",AskDrug
+"약 검색",AskDrug
+"무슨 약인가요",AskDrug
+"다른 약 찾아보기",AskDrug
+"다른 약 검색하기",AskDrug
+"약 더 찾아보기",AskDrug
+"예약 삭제",DeleteReservation
+"예약을 취소해요",DeleteReservation
+"예약을 취소해주세요",DeleteReservation
+"예약 못가요",DeleteReservation
+"병원에 예약시간에 못가요",DeleteReservation
+"예약취소",DeleteReservation
+"예약 취소할래",DeleteReservation
+"예약 취소하기",DeleteReservation
+"예약 취소해주세요",DeleteReservation
+"뭔소리야",DontUnderstand
+"이해할수 없어요",DontUnderstand
+"뭐래",DontUnderstand
+"뭔소리를 하는걸까",DontUnderstand
+"왜 다른소리해",DontUnderstand
+FAQ,FAQ
+"병원에 대한 검색",FAQ
+"병원에 대해서 찾아보기",FAQ
+"병원 정보 찾기",FAQ
+"질문",FAQ
+"질문있어요",FAQ
+"병원 질문",FAQ
+"질문 하기",FAQ
+"병원에 대해 검색하기",FAQ
+"병원 정보 알려줘",FAQ
+"질문하기",FAQ
+"병원 정보 검색",FAQ
+"병원 알아보기",FAQ
+"병원에 대한 정보",FAQ
+"환자 돌볼때 사람 몇명 필요해",FAQ1
+"집에서 환자 간호하려면 뭐가 필요해?",FAQ1
+"집에서 환자 돌보려면 뭐가 필요해?",FAQ1
+"가정에서 환자를 간호하려면 얼마나 많은 친구나 친척들이 필요합니까?",FAQ1
+"환자 간호할때 사람 몇명 필요해?",FAQ1
+"당뇨병있는데 운동하면 좋아져?",FAQ10
+"당뇨병인데 운동해야돼?",FAQ10
+"당뇨병이 있습니다¸ 운동을 하면 좋다고 하는데 어떤 점이 좋은가요?",FAQ10
+"당뇨병일때 운동하면 뭐가 좋아요?",FAQ10
+"나 당뇨병있는데 운동하면 장점이 뭔지 궁금해",FAQ10
+"의사가 호스피스를 잘 모르면 ?",FAQ11
+"만약 의사가 호스피스에 대해 모른다면 어떻게 해야 하나요",FAQ11
+"의사가 호스피스를 잘 모르는데 어떻게 하지?",FAQ11
+"의사가 호스피스를 모르면 어떻게 해요?",FAQ11
+"의사가 호스피스 관련해서 안알려줘",FAQ11
+"어떻게 병실 비용이 책정돼?",FAQ12
+"병실료는 어떻게 책정되는거야?",FAQ12
+"어떻게 병실료가 산정되는거지?",FAQ12
+"병실 비용이 어떻게 산정돼?",FAQ12
+"병실료는 어떻게 산정되나요?",FAQ12
+"병실료 하루에 얼마야?",FAQ13
+"병실료 얼마인지 궁금해요",FAQ13
+"병실비용 얼마야?",FAQ13
+"병실비용 하루에 얼마지?",FAQ13
+"병실료는 하루에 얼마인가요?",FAQ13
+"병원을 직접 방문하지 않고 진료비를 납부할 수 있는 방법은 없는지요?",FAQ14
+"집에서 진료비 내고 싶은데",FAQ14
+"병원 진료비 어떻게 내야돼?",FAQ14
+"병원 방문없이 진료비 납부 어떻게 해?",FAQ14
+"진료비 낼수 있는 방법을 알려줘",FAQ14
+"비만인데 운동을 하면 좋나요?",FAQ15
+"비만증이 있는데 운동하면 좋을까요?",FAQ15
+"비만입니다. 어떻게 해야하나요?",FAQ15
+"비만증이 있습니다. 무엇이 도움될까요?",FAQ15
+"비만증이 있습니다¸ 운동을 하면 좋다고 하는데 어떤 점이 좋은가요?",FAQ15
+"병원을 옮기고 싶은데 진료비는 어떻게 돼요?",FAQ16
+"세브란스 병원으로 옮기면 비용은 어떻게 되나요?",FAQ16
+"산재승인 받은 환자인데요. 병원 옮기면 진료비는 얼마입니까?",FAQ16
+"산재승인 받았습니다. 병원 옮기면 진료비는 어떻게 되나요?",FAQ16
+"산재승인을 받은 환자입니다. 세브란스병원으로 옮기고 싶은데 진료비는 어떻게 되는지요?",FAQ16
+"선택 진료 받으려고 하는데요",FAQ17
+"선택 진료가 뭐야?",FAQ17
+"선택 진료가 뭐에요?",FAQ17
+"선택진료란?",FAQ17
+"선택 진료 받고싶어요",FAQ17
+"세브란스 외래 내원환자 고객인정정보변경 이메일 보내는 방법",FAQ18
+"병원 외래 내원환자 이메일 환자 정보 변경",FAQ18
+"연세 세브란스 환자 정보변경 이메일 보내기",FAQ18
+"외래 이메일 환자 내원환자 정보변경",FAQ18
+"세브란스 외래  내원환자 개인정보 이메일",FAQ18
+"수면내시경 검사를 받을 수 있습니까?",FAQ19
+"내시경 받고싶어",FAQ19
+"수면내시경 검사 알려줘",FAQ19
+"내시경 알려줘",FAQ19
+"수면내시경 받으려면 어떻게해?",FAQ19
+"가족하고 같은 병실을 쓸 수 있나요?",FAQ2
+"친구하고 같은 병실에 입원할 수 있나요?",FAQ2
+"가족하고 같이 같은 병실에 있을 수 있나요?",FAQ2
+"친구랑 같은 병실에 입원하고 싶어요",FAQ2
+"가족이 같이 입원할 경우¸ 같은 병실에 입원할 수 있나요?",FAQ2
+"수술 언제쯤 받을수 있을까?",FAQ20
+"수술은 언제 할수 있나요?",FAQ20
+"수술은 언제 받을수 있나요?",FAQ20
+"수술 언제 받을수 있어?",FAQ20
+"수술 언제 될까요?",FAQ20
+"어느 진료과 가야되죠?",FAQ21
+"어느 진료과 가야할지 모르겠어요",FAQ21
+"어느 과를 가야할까요",FAQ21
+"무슨 과를 가야할지 모르겠어요",FAQ21
+"어느 진료과를 가야하는지 모르세요 ?",FAQ21
+"당일 진료 되요?",FAQ22
+"예약 안해도 되나요?",FAQ22
+"예약 없이 당일 진료가 가능한가요 ?",FAQ22
+"예약 해야되나요?",FAQ22
+"그냥 예약 없이 가면되요?",FAQ22
+"예약 하고싶어",FAQ23
+"예약 하고싶은데",FAQ23
+"예약 할래",FAQ23
+"예약하려면 어떻게해?",FAQ23
+"예약은 어떻게 해야 합니까 ?",FAQ23
+"비자 신체검사 되나요?",FAQ24
+"신체검사 받고싶은데 가능해요?",FAQ24
+"외국에 나갈 비자 신체검사나 입사용 신체검사도 가능한가요?",FAQ24
+"입사용 신체검사 되나요?",FAQ24
+"비자 신검 또는 입사용 신검 가능?",FAQ24
+"외래진료를 받지 않고 바로 입원할 수 있나요?",FAQ25
+"외래진료 안받았는데 입원할 수있나요?",FAQ25
+"입원하려면 어떻게 하나요?",FAQ25
+"외래진료 안받고 입원 가능?",FAQ25
+"바로 입원할수 있나요?",FAQ25
+"외출, 외박 하고싶어요",FAQ26
+"외출·외박할 때¸ 어떤 절차가 필요하나요?",FAQ26
+"외출, 외박 하려면 어떻게 해야하죠?",FAQ26
+"외출, 외박하려고 하는데 절차 알려줘요",FAQ26
+"외출, 외박 절차 알려줘",FAQ26
+"요양급여 의뢰서에 대해 알고싶어요",FAQ27
+"요양급여의뢰서란 무엇입니까 ?",FAQ27
+"요양 급여 의뢰서가 뭐야?",FAQ27
+"요양 급여의뢰서가 뭐죠?",FAQ27
+"요양 급여의뢰서에 대해 알려줘",FAQ27
+"위내시경 받으면 병이 옮기나요?",FAQ28
+"위내시경검사 하면 병이 옮는다고 들었는데",FAQ28
+"위내시경검사를 받으면 다른사람의 병을 옮는다는데?",FAQ28
+"위내시경검사 받으면 전염되나요?",FAQ28
+"내시경검사 받으면 병이 옮나요?",FAQ28
+"유방 초음파 x선촬영 중에 어떤걸 받지?",FAQ29
+"유방초음파와 유방X-선촬영 중 어떤 검사를 받아야 할까요?",FAQ29
+"초음파와 x-선촬영 차이점 알려줘",FAQ29
+"유방 초음파하고 유방x선촬영 중에 어떤걸 해야 합니까?",FAQ29
+"유방초음파와 유방x-선촬영 중 뭘 받지?",FAQ29
+"검진 결과 받는 방법 알려줘",FAQ3
+"검진결과는 어떻게 받나요?",FAQ3
+"검진 결과 어떻게 받을 수 있어?",FAQ3
+"검진 결과 어떻게 받아?",FAQ3
+"검진결과 받으려면 어떻게 해?",FAQ3
+"응급실 진료비는 얼마 입니까?",FAQ30
+"응급실 진료는 비싸요?",FAQ30
+"응급실 진료받으면 가격은 어떻게 되죠?",FAQ30
+"응급실 진료비 알려줘",FAQ30
+"응급실 진료비는 어떻게 계산되나요?",FAQ30
+"검진 결과에서 이상이 있는데 어떻게 해?",FAQ4
+"검진결과에 이상이 있어",FAQ4
+"검진결과에 이상이 있으면 어떤 조치를 해주시나요?",FAQ4
+"검진 결과에 이상이 있을땐?",FAQ4
+"검진 결과에서 이상있으면?",FAQ4
+"검진 당일에 샤워하면 안돼?",FAQ5
+"검진하는 날 샤워해도 돼?",FAQ5
+"검진하는 날 양치해도 되나?",FAQ5
+"검진당일 샤워나 양치질도 하면 안되나요?",FAQ5
+"검진당일에 샤워도 하면 안되나요?",FAQ5
+"위내시경하고 위장X 선 촬영 차이가 뭐야?",FAQ6
+"위내시경을 받을까 위장X선 촬영을 받을까?",FAQ6
+"검진시 위내시경과 위장X-선 촬영 중 어떤 검사를 받아야 할까요?",FAQ6
+"건강검진할때 위내시경하고 위장 X선 촬영 차이점이 궁금해",FAQ6
+"위내시경은 뭐고 위장 X선 촬영은 뭐야?",FAQ6
+"고혈압인데 운동해야돼?",FAQ7
+"고혈압을 가지고 있습니다¸ 운동을 하면 좋다고 하는데 어떤 점이 좋은가요?",FAQ7
+"나 고혈압인데 운동하면 장점이 뭐에요?",FAQ7
+"고혈압있는데 운동하면 좋아져요?",FAQ7
+"고혈압일때 운동하면 뭐가 좋아?",FAQ7
+"교통사고관련해서 진료비는 어떻게 청구돼?",FAQ8
+"교통사고났는데 진료비 어떻게 해?",FAQ8
+"교통사고 환자입니다. 진료비는 어떻게 처리되나요?",FAQ8
+"교통사고 났는데 진료비 어떻게 내야돼?",FAQ8
+"교통사고날때 진료비는 어떻게 내야해요?",FAQ8
+"단기입원실이란 무엇인가요?",FAQ9
+"단기 입원실이 뭔지 궁금해",FAQ9
+"단기 입원실이 뭐야?",FAQ9
+"단기입원실이 뭐지?",FAQ9
+"단기 입원실은 뭐에요?",FAQ9
+"키워드로 질문검색",FAQKeyword
+"단어로 질문하기",FAQKeyword
+"단어로 질문 찾기",FAQKeyword
+"질문 목록 보기",FAQKeyword
+"키워드로 검색",FAQKeyword
+"로 예약해주세요",RDepartment1
+"로 예약해줘",RDepartment1
+"에 예약해주세요",RDepartment1
+"에 예약하고 싶어요",RDepartment1
+"로 예약 해주세요",RDepartment1
+"에 예약 하고 싶어요",RDepartment1
+"에 예약 할래요",RDepartment1
+"로 예약하기",RDepartment1
+"로 예약",RDepartment1
+"예약을 하고싶어요",Reservation
+"예약하기",Reservation
+"병원 예약",Reservation
+"병원 예약 하기",Reservation
+"예약해주세요",Reservation
+"예약할게",Reservation
+"병원을 예약할거예요",Reservation
+"예약이 필요해요",Reservation
+"병원예약하기",Reservation
+"예약",Reservation
+"진료과",ReservationDepartment
+"진료과로 예약하기",ReservationDepartment
+"진료과 예약하기",ReservationDepartment
+"진료과 보기",ReservationDepartment
+"진료과로 예약처리",ReservationDepartment
+"진료과로 예약해주세요",ReservationDepartment
+"병명일때 과 찾아줘",ReservationDisease
+"일때 진료과 찾아줘",ReservationDisease
+"일때 예약해줘",ReservationDisease
+"걸렸을때 예약 해줘",ReservationDisease
+"일때 예약 해줘",ReservationDisease
+"걸렸을때 어디로 가야하지?",ReservationDisease
+"일때 과 보여줘",ReservationDisease
+"병명으로 예약하기",ReservationDisease
+"일때 교수님 보여줘",ReservationDisease
+"병명으로 과 찾아보기",ReservationDisease
+"병명으로 과 찾기",ReservationDisease
+"에 걸렸을때 예약해주세요",ReservationDisease
+"의사로 예약해줘",ReservationProfessor
+"교수님한테 예약해주세요",ReservationProfessor
+"교수님",ReservationProfessor
+"교수님 찾을래",ReservationProfessor
+"교수님한테 예약해줘",ReservationProfessor
+"교수님 찾아줘",ReservationProfessor
+"교수님으로 예약해줘",ReservationProfessor
+"의사한테 예약해줘",ReservationProfessor
+"의사 찾아줘",ReservationProfessor
+"교수님 예약할게",ReservationProfessor
+"교수한테 예약해줘",ReservationProfessor
+"교수님 이름으로 예약하기",ReservationProfessor
+"예약 정보 확인 할게",ShowReservation
+"예약을 확인하고 싶어요",ShowReservation
+"오늘 예약 확인해줘",ShowReservation
+"예약 보기",ShowReservation
+"예약 확인할게요",ShowReservation
+"병원 예약 보기",ShowReservation
+"예약 확인",ShowReservation
+"내 예약 정보 보여줘",ShowReservation
+"예약 보여줘",ShowReservation
+"예약 확인해줘",ShowReservation
+"예약 확인하기",ShowReservation
+"예약 확인해줘",ShowReservation
+"병원 예약 정보 보여주세요",ShowReservation
+"예약 정보",ShowReservation
+"예약 정보를 확인할게요",ShowReservation
+"안녕",StartService
+"안녕하세요",StartService
+"시작",StartService
+"시작할래요",StartService
+"기능",StartService
+"있니?",StartService
+"다른기능",StartService
+"기능보기",StartService
+"스타트",StartService
+"챗봇시작",StartService
+"거기있니?",StartService
+start,StartService
+"다른 기능이 있나요?",StartService
+"고마워용",ThankYou
+"감사합니다",ThankYou
+"감사해요",ThankYou
+"감사감사",ThankYou
+"고맙습니다",ThankYou
+"고마워",ThankYou

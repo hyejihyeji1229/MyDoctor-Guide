@@ -1,0 +1,330 @@
+metadata:
+  platformVersion: "1.0"
+main: true
+name: "MyDoctorMindi"
+#사용 변수 및 entity 목록
+context:
+  variables:
+    startService: "StartService"
+    departmentName: "DepartmentName"
+    lastQuestion: "string"
+    professor_result: "string"
+    iResult: "nlpresult"
+
+    reservationData: "string"
+    diseaseName: "string"
+    professorName: "string"
+    subjectName: "string"
+    date: "string"
+    payback: "string"
+    isReservation: "string"
+states:
+  intent:
+    component: "System.Intent"
+    properties:
+      variable: "iResult"
+      #10%만 넘으면 intent로 판단
+      confidenceThreshold: 0.1
+    transitions:
+      actions:
+        StartService: "startService"
+        AskDrug : "askMedicine"
+        DeleteReservation: "deleteRes"
+        FAQKeyword: "askQuestion"
+        FAQ: "askQuestionService"
+        Reservation: "setReservation"
+        ReservationDepartment: "subjectRes"
+        RDepartment1: "printDeptProfessor"
+        ReservationProfessor: "professorRes"
+        ReservationDisease: "diseaseRes"
+        ShowReservation: "showRes"
+        ThankYou: "sayThanks"
+        DontUnderstand: "unresolved"
+        unresolvedIntent: "unresolved"
+        FAQ1: "faqstate"
+        FAQ2: "faqstate"
+        FAQ3: "faqstate"
+        FAQ4: "faqstate"
+        FAQ5: "faqstate"
+        FAQ6: "faqstate"
+        FAQ7: "faqstate"
+        FAQ8: "faqstate"
+        FAQ9: "faqstate"
+        FAQ10: "faqstate"
+        FAQ11: "faqstate"
+        FAQ12: "faqstate"
+        FAQ13: "faqstate"
+        FAQ14: "faqstate"
+        FAQ15: "faqstate"
+        FAQ16: "faqstate"
+        FAQ17: "faqstate"
+        FAQ18: "faqstate"
+        FAQ19: "faqstate"
+        FAQ20: "faqstate"
+        FAQ21: "faqstate"
+        FAQ22: "faqstate"
+        FAQ23: "faqstate"
+        FAQ24: "faqstate"
+        FAQ25: "faqstate"
+        FAQ26: "faqstate"
+        FAQ27: "faqstate"
+        FAQ28: "faqstate"
+        FAQ29: "faqstate"
+        FAQ30: "faqstate"
+  
+#시작 메뉴 선택
+  startService:
+    component: "StartServiceRetrieval"
+    properties:
+     lastQuestion: "${iResult.value.query}"
+    transitions:
+     return: "startService"
+        
+#약 검색 메뉴
+  askMedicine:
+    component: "System.Output"
+    properties:
+      text: "약 이름을 입력해주세요."
+    transitions: {} 
+  printMedicineName:
+    component: "MedicineRetrieval"
+    properties:
+     lastQuestion: "${iResult.value.query}"
+    transitions:
+     return: "printMedicineName"
+
+#FAQ 검색 메뉴
+  askQuestion:
+    component: "System.Output"
+    properties:
+      text: "검색하고싶은 질문 키워드를 입력해주세요."
+    transitions: {}
+  printFAQ:
+    component: "FAQRetrieval"
+    properties:
+      Questions: "${iResult.value}"
+    transitions:
+     return: "printFAQ"
+
+#FAQ 인텐트로 검색 메뉴 
+  askQuestionService:
+    component: "System.Output"
+    properties:
+      text: "궁금한게 있으신가요? 질문을 입력해주세요"
+    transitions: 
+     return: "askQuestionService"
+
+#예약 기능 선택
+  setReservation:
+    component: "System.List"
+    properties:
+      prompt: "원하시는 기능을 선택해주세요"
+      options:
+      - label: "예약 하기"
+        value: "makeReservation"
+      - label: "예약 확인"
+        value: "showReservation"
+      - label: "예약 삭제"
+        value: "deleteReservation"
+    transitions:
+      actions:
+        makeReservation: "selectReservation"
+        showReservation: "showRes"
+        deleteReservation: "deleteRes"
+#예약 방법 선택
+  selectReservation:
+    component: "System.List"
+    properties:
+      prompt: "예약 방법을 선택해주세요"
+      options:
+      - label: "병명으로 예약하기"
+        value: "diseaseFinder"
+      - label: "진료과로 예약하기"
+        value: "subjectFinder"
+      - label: "교수님으로 예약하기"
+        value: "professorFinder"
+    transitions:
+      actions:
+        diseaseFinder: "diseaseRes" 
+        #"setDisease"
+        subjectFinder: "subjectRes"
+        professorFinder: "professorRes"
+ 
+#진료과 별 교수 검색 및 예약
+  subjectRes:
+    component: "System.List"
+    properties:
+      options: "${departmentName.type.enumValues}"
+      prompt: "진료과 정보를 보시려면 과를 선택해 주세요"
+      variable: 
+    transitions: 
+      next: "printDeptProfessor"
+      error : "unresolved"
+  printDeptProfessor:  
+    component: "ProfessorInDeptRetrieval"
+    properties:
+      professor_result: "${iResult.value}"
+    transitions: {}
+  setDeptProfessor:
+    component: "SetProfessorInDept"
+    properties:
+      professor_result: "${iResult.value}"
+    transitions: {}
+#instant App 실행
+  deptResApp:
+    component: "System.Interactive"
+    properties:
+      sourceVariableList: "diseaseName, professorName, subjectName"
+      variable: "reservationData"
+      id: "MyDoctor_Test_Make_Reservation_Form"
+      prompt: "링크 눌러서 예약진행"
+    transitions: {}
+  queryToDB:
+    component: "MakeReservation"
+    properties:
+      reservationDate: "${reservationData.value.date}"
+      professorName: "${reservationData.value.profName}"
+      subjectName: "${reservationData.value.deptName}"
+      diseaseName: "${reservationData.value.disease}"
+      userName: "${reservationData.value.name}"
+      userPhone: "${reservationData.value.phone}"
+    transitions:
+      return: "queryToDB"
+
+
+#병명 별 검색 및 예약
+  diseaseRes:
+    component: "System.Output"
+    properties:
+      text: "병명을 입력해 주세요~ \n진료과를 찾아드릴게요! "
+    transitions: {}
+  printHospital:
+    component: "FindHospitalRetrieval"
+    properties:
+      disease: "${iResult.value}"
+    transitions: 
+      next: "setDeptProfessor1"
+      error : "unresolved"
+  setDeptProfessor1:
+    component: "SetProfessorInOther"
+    properties:
+      professor_result: "${iResult.value}"
+    transitions: {}    
+  conditionEquals:
+    component: "System.ConditionEquals"
+    properties:
+      variable: "isReservation"
+      value: "true"
+    transitions:
+      actions:
+        equal: "disResApp"
+        notequal: "startService"
+#instant App 실행
+  disResApp:
+    component: "System.Interactive"
+    properties:
+      sourceVariableList: "diseaseName, professorName, subjectName"
+      variable: "reservationData"
+      id: "MyDoctor_Test_Make_Reservation_Form"
+      prompt: "링크 눌러서 예약진행"
+    transitions: {}
+  queryToDB1:
+    component: "MakeReservationInOther"
+    properties:
+      reservationDate: "${reservationData.value.date}"
+      professorName: "${reservationData.value.profName}"
+      subjectName: "${reservationData.value.deptName}"
+      diseaseName: "${reservationData.value.disease}"
+      userName: "${reservationData.value.name}"
+      userPhone: "${reservationData.value.phone}"
+    transitions:
+      return: "queryToDB1"
+
+#교수님 검색 및 예약
+  professorRes:
+    component: "System.Output"
+    properties:
+      text: "교수님을 찾아드릴게요\n교수님 이름을 입력해주세요!"
+    transitions: {}
+  printProfessor:
+    component: "FindProfessorRetrieval"
+    properties:
+      professor: "${iResult.value}"
+    transitions: 
+      next: "setDeptProfessor2"
+      error : "unresolved"
+  setDeptProfessor2:
+    component: "SetProfessorInOther"
+    properties:
+     professor_result: "${iResult.value}"
+    transitions: {}
+  conditionEquals1:
+    component: "System.ConditionEquals"
+    properties:
+      variable: "isReservation"
+      value: "true"
+    transitions:
+      actions:
+        equal: "profResApp"
+        notequal: "startService"
+        
+#instant App 실행
+  profResApp:
+    component: "System.Interactive"
+    properties:
+      sourceVariableList: "diseaseName, professorName, subjectName"
+      variable: "reservationData"
+      id: "MyDoctor_Test_Make_Reservation_Form"
+      prompt: "링크 눌러서 예약진행"
+    transitions: {}
+  queryToDB2:
+    component: "MakeReservationInOther"
+    properties:
+      reservationDate: "${reservationData.value.date}"
+      professorName: "${reservationData.value.profName}"
+      subjectName: "${reservationData.value.deptName}"
+      diseaseName: "${reservationData.value.disease}"
+      userName: "${reservationData.value.name}"
+      userPhone: "${reservationData.value.phone}"
+    transitions:
+      return: "queryToDB2"
+
+
+#예약 확인
+  showRes:
+    component: "ShowReservation"
+    properties:
+      show: "${iResult.value}"
+    transitions:
+      return: "showRes"
+
+#예약 삭제
+  deleteRes:
+    component: "System.Text"
+    component: "DeleteReservation"
+    properties:
+      delete: "${iResult.value}"
+    transitions:
+      return: "deleteRes"
+
+#감사인사
+  sayThanks:
+    component: "System.Output"
+    properties:
+      text: "천만해요!\n다른기능을 이용하려면 다른기능이라고 입력해주세요!"
+    transitions: 
+      return: "sayThanks"
+
+  unresolved:
+    component: "UndefinedServiceRetrieval"
+    properties:
+     lastQuestion: "${iResult.value.query}"
+    transitions:
+     return: "unresolved"
+
+  faqstate:
+    component: "FAQServiceRetrieval"
+    properties:
+     faqQuestions: "${iResult.value.query}"
+    transitions:
+     return: "faqstate"
